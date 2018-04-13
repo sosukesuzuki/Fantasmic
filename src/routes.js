@@ -1,5 +1,4 @@
 import Router from 'express-promise-router'
-import themeparks from 'themeparks'
 
 const router = Router()
 
