@@ -1,19 +1,14 @@
 html
   head
-    link(
-      rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"
-    )
-    link(
-      rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css"
-    )
-    link(
-      rel="stylesheet" href="./stylesheets/index.css"
-    )
+    link(rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css")
+    link(rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css")
+    link(rel="stylesheet" href="./stylesheets/index.css")
+    link(rel="stylesheet" href="//fonts.googleapis.com/css?family=Work+Sans")
     block head
 
   body
+    div.HeaderContainer
+      div.HeaderBody
+        h1 Fantasmic!
     block content
-    script(src="https://unpkg.com/hyperapp")
-    
     block script
