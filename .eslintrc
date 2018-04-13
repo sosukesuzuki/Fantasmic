@@ -1,0 +1,10 @@
+{
+  "extends": ["standard"],
+  "rules": {
+    "no-useless-escape": 0,
+    "prefer-const": "warn",
+    "no-unused-vars": "warn",
+    "no-undef": "warn",
+    "no-lone-blocks": "warn"
+  }
+}

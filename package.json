@@ -1,0 +1,29 @@
+{
+  "name": "Fantasmic",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "ssh://git@github.com/sosukesuzuki/Fantasmic.git",
+  "author": "Sosuke Suzuki <aosukeke@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "lint": "node_modules/.bin/eslint ./src",
+    "start": "node_modules/.bin/nodemon babel.app.js"
+  },
+  "devDependencies": {
+    "app-module-path": "^2.2.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.2",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.19.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "nodemon": "^1.17.3"
+  },
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
