@@ -4,5 +4,13 @@ block head
   link(rel="stylesheet" href="./stylesheets/home.css")
 
 block content
-  div.TopImage
+  section.TopImage
     p あなたに、最高の夢の旅を。
+  section.MainContents
+    div.WaitTimesLink
+      img(src="./static/images/top.jpg")
+      a(href="./land"): p ディズニーランドの<br/>待ち時間を見る
+    div.WaitTimesLink
+      img(src="./static/images/sea.jpg")
+      a(href="./sea"): p ディズニーシーの<br/>待ち時間を見る
+    
