@@ -19,6 +19,7 @@ app.use(stylus.middleware({
 }))
 
 app.use('/stylesheets', express.static('./stylesheets'))
+app.use('/static', express.static('./static'))
 
 app.use(router)
 
