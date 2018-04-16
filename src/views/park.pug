@@ -2,11 +2,12 @@ extends ./layouts/default.pug
 
 block head
   link(rel="stylesheet" href="./stylesheets/park.css")
+  title #{parkName}の待ち時間 | Fantasmic!
 
 block content
-  section.TopImage
+  section.TopImage(style=`background-image:url(/static/images/${parkNameEN}.jpg)`)
   section.MainContents
-    h2 ディズニー#{parkName}の待ち時間
+    h2 ディズニー#{parkNameJP}の待ち時間
       each time, id in waitTimes
         div.Attraction
           p.AttractionName #{time.name}
