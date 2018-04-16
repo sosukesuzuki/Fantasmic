@@ -1,5 +1,10 @@
 import Router from 'express-promise-router'
-import themeparks from 'themeparks'
+import {
+  getSeaWaitTimes,
+  getLandWaitTimes,
+  getSeaOpeningTimes,
+  getLandOpeningTimes
+} from './lib/utils/getTimes'
 
 const router = Router()
 
@@ -9,20 +14,22 @@ router.get('/', (req, res) => {
 
 router.get('/:park', async (req, res) => {
   const { park } = req.params
-  const disneyPark = park === 'sea'
-    ? new themeparks.Parks.TokyoDisneyResortDisneySea()
-    : park === 'land'
-      ? new themeparks.Parks.TokyoDisneyResortMagicKingdom()
-      : ''
 
-  if (disneyPark === '') res.json({error: 'invalid park name.'})
+  const waitTimes = park === 'sea'
+    ? await getSeaWaitTimes()
+    : await getLandWaitTimes()
 
-  const waitTimes = await disneyPark.GetWaitTimes()
-  const times = await disneyPark.GetOpeningTimes()
-  const parkName = park === 'sea'
+  const times = park === 'sea'
+    ? await getSeaOpeningTimes()
+    : await getLandOpeningTimes()
+
+  const parkNameJP = park === 'sea'
     ? 'シー'
     : 'ランド'
-  res.render('park', {parkName, waitTimes, times})
+
+  const parkNameEN = park
+
+  res.render('park', {parkNameEN, parkNameJP, waitTimes, times})
 })
 
 export default router
